@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard - Matching Card Game</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>🎮 Matching Card Game - Project Dashboard</h1>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Phase 2 Status</span>
+                        <span class="stat-value status-pending">0% Complete</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Tasks Progress</span>
+                        <span class="stat-value status-pending">0/24 Tasks</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current Phase</span>
+                        <span class="stat-value status-planning">Facebook Login Integration</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Content -->
+        <main class="dashboard-main">
+            <!-- Phase 2: Facebook Login Integration Overview -->
+            <section class="dashboard-section">
+                <h2>🚀 Phase 2: Facebook Login Integration Overview</h2>
+                <div class="phase2-header">
+                    <div class="phase-info">
+                        <h3>Project Objective</h3>
+                        <p>Implement Facebook login functionality to streamline user experience by eliminating manual player detail input and providing personalized gameplay.</p>
+                    </div>
+                    <div class="phase-timeline">
+                        <h3>Timeline: 7 Working Days</h3>
+                        <div class="timeline-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">Day 0 of 7 (Ready to Start)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <h3>Task Completion</h3>
+                        <div class="completion-circle">
+                            <svg class="circle-chart" viewBox="0 0 36 36">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <text x="18" y="20.35" class="percentage">0%</text>
+                            </svg>
+                        </div>
+                        <p>0/24 Tasks Completed</p>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Key Requirements</h3>
+                        <ul class="requirements-list">
+                            <li>📱 Facebook OAuth integration</li>
+                            <li>👤 Automatic user profile retrieval</li>
+                            <li>🏆 Auto-populated leaderboard entries</li>
+                            <li>🔒 Secure session management</li>
+                            <li>📱 Mobile-responsive authentication</li>
+                        </ul>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Success Criteria</h3>
+                        <div class="success-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Cross-platform compatibility</span>
+                                <span class="metric-target">95%+</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Authentication performance</span>
+                                <span class="metric-target">&lt;500ms</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Security vulnerabilities</span>
+                                <span class="metric-target">Zero</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step-by-Step Workflow Progress -->
+            <section class="dashboard-section">
+                <h2>📋 Step-by-Step Workflow Progress</h2>
+                <div class="workflow-timeline">
+                    <div class="workflow-step pending">
+                        <div class="step-marker">1</div>
+                        <div class="step-content">
+                            <h4>🚀 STEP 1: Project Foundation Setup</h4>
+                            <p>Facebook Developer Setup, Team Coordination, SDK Integration Start</p>
+                            <span class="step-date">Day 1 - 📋 PENDING</span>
+                            <div class="step-progress">
+                                <span class="step-tasks">0/3 Tasks Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workflow-step pending">
+                        <div class="step-marker">2</div>
+                        <div class="step-content">
+                            <h4>🔧 STEP 2: Core Authentication Implementation</h4>
+                            <p>Complete SDK Integration, Authentication UI Design</p>
+                            <span class="step-date">Day 2 - 📋 PENDING</span>
+                            <div class="step-progress">
+                                <span class="step-tasks">0/2 Tasks Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workflow-step pending">
+                        <div class="step-marker">3</div>
+                        <div class="step-content">
+                            <h4>✅ STEP 3: Testing & Validation Phase 1</h4>
+                            <p>Authentication Flow Testing, Initial Compliance Review</p>
+                            <span class="step-date">Day 2-3 - 📋 PENDING</span>
+                            <div class="step-progress">
+                                <span class="step-tasks">0/2 Tasks Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workflow-step pending">
+                        <div class="step-marker">4</div>
+                        <div class="step-content">
+                            <h4>📊 STEP 4: User Profile Integration</h4>
+                            <p>Profile Data Implementation, Privacy Policy, Profile UI</p>
+                            <span class="step-date">Day 3 - 📋 PENDING</span>
+                            <div class="step-progress">
+                                <span class="step-tasks">0/3 Tasks Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workflow-step pending">
+                        <div class="step-marker">5</div>
+                        <div class="step-content">
+                            <h4>🎮 STEP 5: Game Logic Integration</h4>
+                            <p>Game Authentication Integration, Testing, Leaderboard Design</p>
+                            <span class="step-date">Day 4 - 📋 PENDING</span>
+                            <div class="step-progress">
+                                <span class="step-tasks">0/3 Tasks Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workflow-step pending">
+                        <div class="step-marker">6</div>
+                        <div class="step-content">
+                            <h4>🔒 STEP 6: Security Implementation</h4>
+                            <p>Security Hardening, Security Testing, Privacy Compliance</p>
+                            <span class="step-date">Day 5 - 📋 PENDING</span>
+                            <div class="step-progress">
+                                <span class="step-tasks">0/3 Tasks Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workflow-step pending">
+                        <div class="step-marker">7</div>
+                        <div class="step-content">
+                            <h4>📱 STEP 7: Mobile Optimization</h4>
+                            <p>Mobile Authentication, Cross-Platform Testing, Performance</p>
+                            <span class="step-date">Day 6 - 📋 PENDING</span>
+                            <div class="step-progress">
+                                <span class="step-tasks">0/3 Tasks Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workflow-step pending">
+                        <div class="step-marker">8</div>
+                        <div class="step-content">
+                            <h4>🏁 STEP 8: Final Validation & Deployment</h4>
+                            <p>Final UX Testing, Security Audit, Deployment Preparation</p>
+                            <span class="step-date">Day 7 - 📋 PENDING</span>
+                            <div class="step-progress">
+                                <span class="step-tasks">0/3 Tasks Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Task Assignments -->
+            <section class="dashboard-section">
+                <h2>👥 Team Task Assignments - Phase 2</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-avatar">🎯</div>
+                        <div class="member-info">
+                            <h4>Vision</h4>
+                            <p>Project Manager</p>
+                            <div class="member-stats">
+                                <span class="stat">Assigned: 4 Tasks</span>
+                                <span class="stat">Status: 📋 PENDING</span>
+                            </div>
+                            <div class="member-tasks">
+                                <div class="task-item pending">📋 Facebook Developer Setup</div>
+                                <div class="task-item pending">📋 Team Coordination</div>
+                                <div class="task-item pending">📋 Privacy Policy Development</div>
+                                <div class="task-item pending">📋 Deployment Preparation</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">💻</div>
+                        <div class="member-info">
+                            <h4>Codi</h4>
+                            <p>Lead Developer</p>
+                            <div class="member-stats">
+                                <span class="stat">Assigned: 6 Tasks</span>
+                                <span class="stat">Status: 📋 PENDING</span>
+                            </div>
+                            <div class="member-tasks">
+                                <div class="task-item pending">📋 SDK Integration Start</div>
+                                <div class="task-item pending">📋 Complete SDK Integration</div>
+                                <div class="task-item pending">📋 Profile Data Implementation</div>
+                                <div class="task-item pending">📋 Game Authentication Integration</div>
+                                <div class="task-item pending">📋 Security Hardening</div>
+                                <div class="task-item pending">📋 Performance Optimization</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">🎨</div>
+                        <div class="member-info">
+                            <h4>Wisdom</h4>
+                            <p>UI/UX Designer</p>
+                            <div class="member-stats">
+                                <span class="stat">Assigned: 4 Tasks</span>
+                                <span class="stat">Status: 📋 PENDING</span>
+                            </div>
+                            <div class="member-tasks">
+                                <div class="task-item pending">📋 Authentication UI Design</div>
+                                <div class="task-item pending">📋 Profile UI Integration</div>
+                                <div class="task-item pending">📋 Enhanced Leaderboard Design</div>
+                                <div class="task-item pending">📋 Mobile Authentication Optimization</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">🔍</div>
+                        <div class="member-info">
+                            <h4>KC</h4>
+                            <p>QA Lead</p>
+                            <div class="member-stats">
+                                <span class="stat">Assigned: 5 Tasks</span>
+                                <span class="stat">Status: 📋 PENDING</span>
+                            </div>
+                            <div class="member-tasks">
+                                <div class="task-item pending">📋 Authentication Flow Testing</div>
+                                <div class="task-item pending">📋 Profile Integration Testing</div>
+                                <div class="task-item pending">📋 Security Testing</div>
+                                <div class="task-item pending">📋 Cross-Platform Testing</div>
+                                <div class="task-item pending">📋 Final UX Testing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">🛡️</div>
+                        <div class="member-info">
+                            <h4>Zenith</h4>
+                            <p>External Auditor</p>
+                            <div class="member-stats">
+                                <span class="stat">Assigned: 3 Tasks</span>
+                                <span class="stat">Status: 📋 PENDING</span>
+                            </div>
+                            <div class="member-tasks">
+                                <div class="task-item pending">📋 Initial Compliance Review</div>
+                                <div class="task-item pending">📋 Privacy Compliance Audit</div>
+                                <div class="task-item pending">📋 Final Security & Quality Audit</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task Status Overview -->
+            <section class="dashboard-section">
+                <h2>📊 Task Status Overview</h2>
+                <div class="status-grid">
+                    <div class="status-card pending">
+                        <div class="status-icon">📋</div>
+                        <div class="status-info">
+                            <h3>24</h3>
+                            <p>Pending Tasks</p>
+                            <span class="percentage">100%</span>
+                        </div>
+                    </div>
+                    <div class="status-card in-progress">
+                        <div class="status-icon">🔄</div>
+                        <div class="status-info">
+                            <h3>0</h3>
+                            <p>In Progress</p>
+                            <span class="percentage">0%</span>
+                        </div>
+                    </div>
+                    <div class="status-card completed">
+                        <div class="status-icon">✅</div>
+                        <div class="status-info">
+                            <h3>0</h3>
+                            <p>Completed</p>
+                            <span class="percentage">0%</span>
+                        </div>
+                    </div>
+                    <div class="status-card blocked">
+                        <div class="status-icon">⏸️</div>
+                        <div class="status-info">
+                            <h3>0</h3>
+                            <p>Blocked</p>
+                            <span class="percentage">0%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="priority-breakdown">
+                    <h3>Tasks by Priority</h3>
+                    <div class="priority-grid">
+                        <div class="priority-item critical">
+                            <span class="priority-label">🔴 Critical</span>
+                            <span class="priority-count">12 Tasks</span>
+                            <div class="priority-bar">
+                                <div class="priority-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="priority-item high">
+                            <span class="priority-label">🟡 High</span>
+                            <span class="priority-count">11 Tasks</span>
+                            <div class="priority-bar">
+                                <div class="priority-fill" style="width: 46%"></div>
+                            </div>
+                        </div>
+                        <div class="priority-item medium">
+                            <span class="priority-label">🟢 Medium</span>
+                            <span class="priority-count">1 Task</span>
+                            <div class="priority-bar">
+                                <div class="priority-fill" style="width: 4%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Detailed Task Breakdown -->
+            <section class="dashboard-section">
+                <h2>📝 Detailed Task Breakdown</h2>
+                <div class="task-categories">
+                    <div class="task-category">
+                        <h4>💻 Development Tasks</h4>
+                        <div class="task-progress">
+                            <div class="task-bar pending" style="width: 0%">
+                                <span>0/6 Complete</span>
+                            </div>
+                        </div>
+                        <div class="task-list">
+                            <div class="task-item pending">📋 SDK Integration Start</div>
+                            <div class="task-item pending">📋 Complete SDK Integration</div>
+                            <div class="task-item pending">📋 Profile Data Implementation</div>
+                            <div class="task-item pending">📋 Game Authentication Integration</div>
+                            <div class="task-item pending">📋 Security Hardening</div>
+                            <div class="task-item pending">📋 Performance Optimization</div>
+                        </div>
+                    </div>
+                    <div class="task-category">
+                        <h4>🎨 Design Tasks</h4>
+                        <div class="task-progress">
+                            <div class="task-bar pending" style="width: 0%">
+                                <span>0/4 Complete</span>
+                            </div>
+                        </div>
+                        <div class="task-list">
+                            <div class="task-item pending">📋 Authentication UI Design</div>
+                            <div class="task-item pending">📋 Profile UI Integration</div>
+                            <div class="task-item pending">📋 Enhanced Leaderboard Design</div>
+                            <div class="task-item pending">📋 Mobile Authentication Optimization</div>
+                        </div>
+                    </div>
+                    <div class="task-category">
+                        <h4>🔍 Testing Tasks</h4>
+                        <div class="task-progress">
+                            <div class="task-bar pending" style="width: 0%">
+                                <span>0/5 Complete</span>
+                            </div>
+                        </div>
+                        <div class="task-list">
+                            <div class="task-item pending">📋 Authentication Flow Testing</div>
+                            <div class="task-item pending">📋 Profile Integration Testing</div>
+                            <div class="task-item pending">📋 Security Testing</div>
+                            <div class="task-item pending">📋 Cross-Platform Testing</div>
+                            <div class="task-item pending">📋 Final UX Testing</div>
+                        </div>
+                    </div>
+                    <div class="task-category">
+                        <h4>🎯 Management & Audit Tasks</h4>
+                        <div class="task-progress">
+                            <div class="task-bar pending" style="width: 0%">
+                                <span>0/7 Complete</span>
+                            </div>
+                        </div>
+                        <div class="task-list">
+                            <div class="task-item pending">📋 Facebook Developer Setup</div>
+                            <div class="task-item pending">📋 Team Coordination</div>
+                            <div class="task-item pending">📋 Privacy Policy Development</div>
+                            <div class="task-item pending">📋 Initial Compliance Review</div>
+                            <div class="task-item pending">📋 Privacy Compliance Audit</div>
+                            <div class="task-item pending">📋 Final Security & Quality Audit</div>
+                            <div class="task-item pending">📋 Deployment Preparation</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Communication & Next Steps -->
+            <section class="dashboard-section">
+                <h2>📢 Project Communication & Next Steps</h2>
+                <div class="communication-grid">
+                    <div class="comm-card">
+                        <h4>🕘 Daily Standups</h4>
+                        <p><strong>Time:</strong> 9:00 AM Daily</p>
+                        <ul>
+                            <li>Progress updates from all team members</li>
+                            <li>Blocker identification and resolution</li>
+                            <li>Task coordination and dependency management</li>
+                            <li>Risk assessment and mitigation</li>
+                        </ul>
+                    </div>
+                    <div class="comm-card">
+                        <h4>🎯 Milestone Reviews</h4>
+                        <ul>
+                            <li><strong>Day 2:</strong> Foundation setup complete</li>
+                            <li><strong>Day 4:</strong> Core integration functional</li>
+                            <li><strong>Day 6:</strong> Testing and validation complete</li>
+                            <li><strong>Day 7:</strong> Final deployment preparation</li>
+                        </ul>
+                    </div>
+                    <div class="comm-card">
+                        <h4>🚨 Escalation Process</h4>
+                        <ul>
+                            <li><strong>Technical blockers:</strong> Immediate Codi/Vision coordination</li>
+                            <li><strong>Design/UX issues:</strong> Wisdom/KC collaboration</li>
+                            <li><strong>Compliance concerns:</strong> Zenith/Vision consultation</li>
+                            <li><strong>Timeline risks:</strong> Full team emergency meeting</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="next-steps">
+                    <h4>🚀 Immediate Next Steps</h4>
+                    <div class="activity-feed">
+                        <div class="activity-item pending">
+                            <span class="activity-time">Ready</span>
+                            <span class="activity-description">Team acknowledgment: All members confirm task understanding and timeline commitment</span>
+                            <span class="activity-author">All Team Members</span>
+                        </div>
+                        <div class="activity-item pending">
+                            <span class="activity-time">Next</span>
+                            <span class="activity-description">Daily standup coordination and implementation kickoff</span>
+                            <span class="activity-author">Vision (Project Manager)</span>
+                        </div>
+                        <div class="activity-item pending">
+                            <span class="activity-time">Day 1</span>
+                            <span class="activity-description">Begin Step 1: Project Foundation Setup (Facebook Developer Setup, Team Coordination, SDK Integration Start)</span>
+                            <span class="activity-author">Vision, Codi</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <div class="footer-content">
+                <p>Project Dashboard - Phase 2: Facebook Login Integration</p>
+                <p>Team: Vision (PM), Codi (Dev), Wisdom (UX), KC (QA), Zenith (Audit) | Last Updated: 2025-07-11</p>
+                <p>Status: Ready to begin | Timeline: 7 Working Days | Tasks: 24 Total (0 Complete, 24 Pending)</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

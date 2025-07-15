@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaiMiles Activity July 2025 - TEST VERSION</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Enhanced Match Animation Effects */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #48bb78;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: particleBurst 0.8s ease-out forwards;
+            z-index: 1000;
+        }
+        
+        @keyframes particleBurst {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0) translate(var(--dx), var(--dy));
+            }
+        }
+        
+        /* Enhanced match animation for cards */
+        .card.matched {
+            pointer-events: none;
+            opacity: 0.9;
+            transform: scale(0.95);
+            box-shadow: 0 0 20px rgba(72, 187, 120, 0.6);
+            border: 2px solid rgba(72, 187, 120, 0.8);
+        }
+        
+        .match-celebration {
+            animation: matchCelebration 0.6s ease-out;
+        }
+        
+        @keyframes matchCelebration {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 25px rgba(72, 187, 120, 0.8);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 20px rgba(72, 187, 120, 0.6);
+            }
+        }
+        
+        /* Enhanced visual feedback */
+        .card.match-animation {
+            animation: matchPulse 0.5s ease-in-out, matchCelebration 0.6s ease-out;
+        }
+        
+        /* Test Version Banner */
+        .test-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #ff6b6b, #ffa500);
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            z-index: 10000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border-bottom: 3px solid #ff4757;
+        }
+        
+        .test-banner::before {
+            content: '🧪 ';
+            font-size: 16px;
+        }
+        
+        .test-banner::after {
+            content: ' - All changes tested here first!';
+            font-size: 11px;
+            opacity: 0.9;
+        }
+        
+        /* Adjust body padding for banner */
+        body {
+            padding-top: 50px;
+        }
+        
+        /* Music Controls */
+        .music-controls {
+            position: fixed;
+            top: 60px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .music-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .music-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .volume-slider {
+            width: 80px;
+            height: 5px;
+            background: #ddd;
+            border-radius: 5px;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+            cursor: pointer;
+        }
+        
+        .volume-slider:hover {
+            opacity: 1;
+        }
+        
+        .volume-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            background: #48bb78;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .volume-slider::-moz-range-thumb {
+            width: 15px;
+            height: 15px;
+            background: #48bb78;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .volume-icon {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Music Prompt */
+        .music-prompt {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10001;
+        }
+        
+        .music-prompt-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .music-prompt-content p {
+            margin: 0 0 20px 0;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .music-choice-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .music-choice-btn {
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .enable-btn {
+            background: #48bb78;
+            color: white;
+        }
+        
+        .enable-btn:hover {
+            background: #38a169;
+            transform: translateY(-2px);
+        }
+        
+        .close-btn {
+            background: #e53e3e;
+            color: white;
+        }
+        
+        .close-btn:hover {
+            background: #c53030;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Test Version Banner -->
+    <div class="test-banner">
+        TEST VERSION
+    </div>
+    
+    <!-- Music Controls -->
+    <div class="music-controls">
+        <button id="musicToggle" class="music-toggle" title="Toggle Music">🎵</button>
+        <div class="volume-control">
+            <span class="volume-icon">🔊</span>
+            <input type="range" id="volumeSlider" class="volume-slider" min="0" max="100" value="30" title="Volume">
+        </div>
+    </div>
+    
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Matching Card Game</h1>
+            <div class="game-stats">
+                <div class="timer-display">
+                    <span class="timer-label">Time:</span>
+                    <span id="timer">00:00:00</span>
+                </div>
+                <div class="score-display">
+                    <span class="score-label">Pairs:</span>
+                    <span id="score">0/8</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-main">
+            <div class="game-controls">
+                <button id="startBtn" class="btn btn-primary">Start Game</button>
+                <button id="restartBtn" class="btn btn-secondary">Restart</button>
+                <button id="leaderboardBtn" class="btn btn-tertiary">Leaderboard</button>
+            </div>
+
+            <div id="gameBoard" class="game-board">
+                <!-- Cards will be generated by JavaScript -->
+            </div>
+
+            <div class="game-status">
+                <p id="gameMessage">Click "Start Game" to begin!</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Leaderboard Modal -->
+    <div id="leaderboardModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Leaderboard - Top 10</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="leaderboardList" class="leaderboard-list">
+                    <!-- Leaderboard entries will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Complete Modal -->
+    <div id="gameCompleteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Congratulations!</h2>
+            </div>
+            <div class="modal-body">
+                <p>You completed the game!</p>
+                <p>Your time: <span id="finalTime"></span></p>
+                <div class="name-input-section">
+                    <label for="playerName">Enter your name:</label>
+                    <input type="text" id="playerName" maxlength="20" placeholder="Your name">
+                    <button id="saveScoreBtn" class="btn btn-primary">Save Score</button>
+                </div>
+                <button id="playAgainBtn" class="btn btn-secondary">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script-test.js"></script>
+</body>
+</html>
